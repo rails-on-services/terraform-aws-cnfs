@@ -69,7 +69,7 @@ resource "aws_security_group_rule" "ssh_to_ec2" {
   security_group_id = aws_security_group.this.id
 }
 
-resource "aws_security_group_rule" "3000_to_ec2" {
+resource "aws_security_group_rule" "ec2_from_to_3000" {
   type        = "ingress"
   from_port   = 3000
   to_port     = 3000
