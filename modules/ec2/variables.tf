@@ -26,7 +26,7 @@ variable "subnet_ids" {
   default = []
 }
 
-variable "ec2_instance_type" {
+variable "instance_type" {
   default = "t3.large"
 }
 
@@ -35,7 +35,7 @@ variable "ec2_ami_distro" {
   description = "The EC2 ami linux distro to use, can be debian or ubuntu"
 }
 
-variable "ec2_key_pair" {
+variable "key_name" {
   default     = null
   description = "EC2 ssh key pair name to use"
 }
@@ -48,6 +48,7 @@ variable "ssh_public_keys" {
 
 
 variable "aws_cert_arn" {
+  default     = ""
   type        = string
   description = "AWS ACM cert arn to be used by the created load balancer"
 }
